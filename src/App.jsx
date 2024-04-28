@@ -8,8 +8,12 @@ import People from "./components/People/People";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 const App = () => {
+
+  const [playState, setPlayState] = React.useState(false)
+
   return (
     <div>
       <Navbar/>
@@ -17,7 +21,7 @@ const App = () => {
       <div className="container">
         <Title subTitle='BETTER MENTAL HEALTH FOR EVERYONE' title='We Provide Awarness On'/>
         <Programs/>
-        <About/>
+        <About setPlayState={setPlayState} />
         <Title subTitle='Inspiration' title='People That Encourage Mental Health'/>
         <People/>
         <Title subTitle='Testimonials' title='What our users say about Mental Health'/>
@@ -26,6 +30,7 @@ const App = () => {
         <Contact/>
         <Footer/>
       </div>
+      <VideoPlayer playState={playState} setPlayState={setPlayState}/>
     </div>
   )
 }

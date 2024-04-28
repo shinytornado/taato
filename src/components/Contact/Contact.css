@@ -62,3 +62,14 @@
     align-items: center;
     justify-content: center;
 }
+
+/*------------ media query ------------*/
+
+@media (max-width: 700px){
+    .contact{
+        display: block;
+    }
+    .contact-col{
+        padding: 20px;
+    }
+}
