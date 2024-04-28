@@ -24,6 +24,9 @@ nav ul li{
     background: #202020;/*#121530*/
     transition: 0.5s;
 }
+.menu-icon{
+    display: none;
+}
 
 /*------------ media query for navbar ------------*/
 @media (max-width: 1000px){
@@ -52,5 +55,13 @@ nav ul li{
     nav ul li{
         display: block;
         margin: 25px 40px;
+    }
+    .menu-icon{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hide-mobile-menu{
+        right: -200px;
     }
 }
