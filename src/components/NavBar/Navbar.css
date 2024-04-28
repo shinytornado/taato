@@ -49,4 +49,8 @@ nav ul li{
         padding-top: 70px;
         transition: 0.5s;
     }
+    nav ul li{
+        display: block;
+        margin: 25px 40px;
+    }
 }
