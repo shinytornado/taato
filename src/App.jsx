@@ -26,7 +26,7 @@ const App = () => {
         <People/>
         <Title subTitle='Testimonials' title='What our users say about Mental Health'/>
         <Testimonials/>
-        <Title subTitle='Contact Us' title='Get in Touch'/>
+        <Title subTitle='Contact Us' title='Write Below How Do You Deal With Mental Health?'/>
         <Contact/>
         <Footer/>
       </div>
