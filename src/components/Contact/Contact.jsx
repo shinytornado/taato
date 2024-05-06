@@ -5,10 +5,10 @@ import phone_icon from '../../assets/phone-icon.png'
 import location_icon from '../../assets/location-icon.png'
 import email_icon from '../../assets/msg-icon.png'
 
-const Contact = () => {
+const Contact = () => {  
 
   const [result, setResult] = React.useState("");
-
+  
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
@@ -49,12 +49,11 @@ const Contact = () => {
             <label>Your Name</label>
             <input type="text" name='name' placeholder='Enter your name'
             required/>
-            {/*<label>Phone Number</label>
-            <input type="tel" name='phone' placeholder='Enter your phone number'required/>*/}
+            <label>Phone Number</label>
+            <input type="tel" name='phone' placeholder='Enter your phone number'required/>
             <label>Write Your Message Here</label>
-            <textarea name="message"rows="6" placeholder='Enter your message'
-            required></textarea>
-            <button type='submit' className='dark-btn'>Submit Now</button>
+            <textarea name="message"rows="6" placeholder='Enter your message' required></textarea>
+            <button type='submit' className='dark-btn'>Submit Now</button> 
         </form>
         <span>{result}</span>
       </div>

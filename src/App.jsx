@@ -9,6 +9,9 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import Brain from "./components/Brain/Brain";
+import Body from "./components/Body/Body";
+import Heart from "./components/Heart/Heart";
 
 const App = () => {
 
@@ -26,6 +29,12 @@ const App = () => {
         <People/>
         <Title subTitle='Testimonials' title='What our users say about Mental Health'/>
         <Testimonials/>
+        <Title subTitle='People on mental health affecting Brain' title=''/>
+        <Brain/>
+        <Title subTitle='People on mental health affecting Body' title=''/>
+        <Body/>
+        <Title subTitle='People on mental health affecting Heart' title=''/>
+        <Heart/>
         <Title subTitle='Contact Us' title='Write Below How Do You Deal With Mental Health?'/>
         <Contact/>
         <Footer/>
