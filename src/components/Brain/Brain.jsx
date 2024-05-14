@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef } from 'react'
 import './Brain.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -6,8 +7,18 @@ import user_1 from '../../assets/user-1.png'
 import user_2 from '../../assets/user-2.png'
 import user_3 from '../../assets/user-3.png'
 import user_4 from '../../assets/user-4.png'
+import Title from '../Title/Title'
 
-const Brain = () => {
+const Brain = ({playSta,setPlay}) => {
+
+    const player = useRef(null);
+
+    const closePlayer = (e) => {
+        if(e.target === player.current){
+            setPlay(false)
+        }
+    }
+
     const slider = React.useRef()
         let tx=0;
     const slideForward = () => {
@@ -24,7 +35,9 @@ const Brain = () => {
     }
 
   return (
-    <div className='brain'>
+    <div className={`brain ${playSta?'':'hide'}`} ref={player} onClick={closePlayer} >
+        <div className="popupwindow">
+        <Title subTitle='People on mental health affecting Brain' title=''/>
       <img src={next_icon} alt="" className='next-btn' onClick={slideForward}/>
       <img src={back_icon} alt="" className='back-btn' onClick={slideBackward}/>
       <div className="slider">
@@ -87,6 +100,7 @@ const Brain = () => {
                 </div>
             </li>
             </ul>
+      </div>
       </div>
     </div>
   )

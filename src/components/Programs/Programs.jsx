@@ -8,35 +8,35 @@ import program_icon_2 from '../../assets/program-icon-2.png'
 import program_icon_3 from '../../assets/program-icon-3.png'
 import { Link } from 'react-scroll'
 
-const Programs = () => {
+const Programs = ({setPlay,setBod,setHea}) => {
   return (
     <div className='programs'>
       <div className="program">
-      <Link to='brain' smooth={true} offset={-260} duration={500}>
+      {/*<Link to='brain' smooth={true} offset={-260} duration={500}>*/}
         <img src={program_1} alt="" />
         <div className="caption">
-          <img src={program_icon_1} alt="" />
+          <img src={program_icon_1} onClick={()=>{setPlay(true)}} alt="" />
           <p>Brain</p>
         </div>
-        </Link>
+       {/* </Link>*/}
       </div>
       <div className="program">
-      <Link to='body' smooth={true} offset={-260} duration={500}>
+      {/*<Link to='body' smooth={true} offset={-260} duration={500}>*/}
         <img src={program_2} alt="" />
         <div className="caption">
-          <img src={program_icon_2} alt="" />
+          <img src={program_icon_2} onClick={()=>{setBod(true)}} alt="" />
           <p>Body</p>
         </div>
-        </Link>
+        {/*</Link>*/}
       </div>
       <div className="program">
-      <Link to='heart' smooth={true} offset={-260} duration={500}>
+      {/*<Link to='heart' smooth={true} offset={-260} duration={500}>*/}
         <img src={program_3} alt="" />
         <div className="caption">
-          <img src={program_icon_3} alt="" />
+          <img src={program_icon_3} onClick={()=>{setHea(true)}} alt="" />
           <p>Heart</p>
         </div>
-        </Link>
+        {/*</Link>*/}
       </div>
     </div>
   )

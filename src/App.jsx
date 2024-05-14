@@ -16,6 +16,9 @@ import Heart from "./components/Heart/Heart";
 const App = () => {
 
   const [playState, setPlayState] = React.useState(false)
+  const [playSta, setPlay] = React.useState(false)
+  const [playBod, setBod] = React.useState(false)
+  const [playHea, setHea] = React.useState(false)
 
   return (
     <div>
@@ -23,18 +26,15 @@ const App = () => {
       <Hero/>
       <div className="container">
         <Title subTitle='BETTER MENTAL HEALTH FOR EVERYONE' title='We Provide Awarness On'/>
-        <Programs/>
+        <Programs setPlay={setPlay} setBod={setBod} setHea={setHea}/>
         <About setPlayState={setPlayState} />
         <Title subTitle='Inspiration' title='People That Encourage Mental Health'/>
         <People/>
         <Title subTitle='Testimonials' title='What our users say about Mental Health'/>
         <Testimonials/>
-        <Title subTitle='People on mental health affecting Brain' title=''/>
-        <Brain/>
-        <Title subTitle='People on mental health affecting Body' title=''/>
-        <Body/>
-        <Title subTitle='People on mental health affecting Heart' title=''/>
-        <Heart/>
+        <Brain playSta={playSta} setPlay={setPlay}/>
+        <Body playBod={playBod} setBod={setBod}/>
+        <Heart playHea={playHea} setHea={setHea}/>
         <Title subTitle='Contact Us' title='Write Below How Do You Deal With Mental Health?'/>
         <Contact/>
         <Footer/>
